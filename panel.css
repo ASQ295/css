@@ -1,0 +1,139 @@
+/* Reset de márgenes y padding */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #000000, #1a1a1a); /* Fondo oscuro con gradiente */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Contenedor principal del panel */
+.panel-container {
+    background: rgba(20, 20, 20, 0.9); /* Fondo oscuro transparente */
+    border: 1px solid #00ff88; /* Bordes verdes ciberseguridad */
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.2); /* Efecto de sombra verde */
+    width: 420px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.panel-container:hover {
+    transform: scale(1.03);
+}
+
+/* Título del panel */
+.panel-container h1 {
+    color: #00ff88; /* Color verde brillante */
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 0 5px #00ff88;
+}
+
+/* Información del usuario */
+.panel-container p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+#username, #plan {
+    font-weight: bold;
+    color: #00ff88; /* Color verde brillante */
+    font-size: 20px;
+}
+
+/* Campos de entrada */
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #00ffaa; /* Borde verde claro */
+    font-size: 16px;
+    background-color: #111; /* Fondo negro para los campos */
+    color: #00ff88; /* Color verde para el texto */
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #00ffcc; /* Borde verde más claro al hacer foco */
+    background-color: #000; /* Fondo negro al hacer foco */
+}
+
+.input-field::placeholder {
+    color: #555;
+    font-style: italic;
+}
+
+/* Botón de logout */
+.panel-container button {
+    width: 100%;
+    padding: 14px 22px;
+    font-size: 16px;
+    background-color: #00ff88; /* Verde ciberseguridad */
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px #00ff88; /* Sombra verde */
+}
+
+.panel-container button:hover {
+    background-color: #00ffaa; /* Verde más claro */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ffaa; /* Sombra más intensa */
+}
+
+.panel-container button:active {
+    background-color: #00cc77; /* Verde más oscuro al hacer clic */
+    transform: scale(0.98);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer a {
+    color: #00ffaa; /* Verde para enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00ffcc; /* Verde más claro al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
